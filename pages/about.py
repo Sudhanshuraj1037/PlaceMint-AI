@@ -12,7 +12,7 @@ from utils.theme import render_hero, render_section_label
 
 # ── Edit these before submitting your project ────────────────────────────────
 PLACEHOLDER_STUDENT_NAME = "Hari Om, Preet Bana, Mridul Vatsal and Sudhanshu Raj"
-PLACEHOLDER_ROLL_NUMBER = "5000 students from Lovely Professional University"
+PLACEHOLDER_ROLL_NUMBER = "12402165, 12407993, 12405889 and 12406597"
 PLACEHOLDER_COLLEGE = "Lovely Professional University, Phagwara, Punjab"
 PLACEHOLDER_DEPARTMENT = "Department of Computer Science & Engineering"
 PLACEHOLDER_GUIDE = " Sir Anzar Hussain Lone"
@@ -33,7 +33,7 @@ with col1:
         <div class="pm-card">
             <p style="line-height:2.0; margin:0;">
                 <b>Student:</b> {PLACEHOLDER_STUDENT_NAME}<br>
-                <b>Dataset:</b> {PLACEHOLDER_ROLL_NUMBER}<br>
+                <b>Registration No.:</b> {PLACEHOLDER_ROLL_NUMBER}<br>
                 <b>College:</b> {PLACEHOLDER_COLLEGE}<br>
                 <b>Department:</b> {PLACEHOLDER_DEPARTMENT}<br>
                 <b>Project Guide:</b> {PLACEHOLDER_GUIDE}<br>
