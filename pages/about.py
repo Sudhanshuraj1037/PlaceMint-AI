@@ -11,7 +11,7 @@ import streamlit as st
 from utils.theme import render_hero, render_section_label
 
 # ── Edit these before submitting your project ────────────────────────────────
-PLACEHOLDER_STUDENT_NAME = "Hari Om, Preet Bana, Mridul Vatsal and Sudhanshu Raj"
+PLACEHOLDER_STUDENT_NAME = "Hariom Tiwari, Preet Singh, Mridul Vatsal and Sudhanshu Raj"
 PLACEHOLDER_ROLL_NUMBER = "12402165, 12407993, 12405889 and 12406597"
 PLACEHOLDER_COLLEGE = "Lovely Professional University, Phagwara, Punjab"
 PLACEHOLDER_DEPARTMENT = "Department of Computer Science & Engineering"
