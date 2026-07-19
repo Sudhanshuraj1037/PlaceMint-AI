@@ -43,7 +43,7 @@ with col1:
         """,
         unsafe_allow_html=True,
     )
-    st.caption("✏️ Edit these placeholders in `pages/about.py` before submitting your report.")
+    
 
 with col2:
     render_section_label("What this project does")
