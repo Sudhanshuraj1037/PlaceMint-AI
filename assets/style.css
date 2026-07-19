@@ -1,0 +1,189 @@
+/* ============================================================================
+   PlaceMint AI -- Dark + Blue Dashboard Theme
+   Loaded via utils/theme.py::inject_css(). Works alongside the base colors
+   set in .streamlit/config.toml (which handles native widget theming).
+   ============================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+:root {
+  --pm-bg: #0a0e1a;
+  --pm-bg-alt: #0d1424;
+  --pm-surface: #121a2e;
+  --pm-surface-hover: #16203a;
+  --pm-border: #223052;
+  --pm-accent: #3b82f6;
+  --pm-accent-light: #60a5fa;
+  --pm-accent-cyan: #22d3ee;
+  --pm-success: #34d399;
+  --pm-warning: #fbbf24;
+  --pm-text: #e5e9f5;
+  --pm-text-muted: #8b94ad;
+  --pm-font-display: 'Sora', sans-serif;
+  --pm-font-body: 'Inter', sans-serif;
+  --pm-font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ---- Base typography ---- */
+html, body, [class*="css"] {
+  font-family: var(--pm-font-body);
+}
+
+h1, h2, h3, h4, .pm-display {
+  font-family: var(--pm-font-display) !important;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Page hero header ---- */
+.pm-hero {
+  padding: 1.75rem 2rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f1830 0%, #16224a 55%, #10203f 100%);
+  border: 1px solid var(--pm-border);
+  margin-bottom: 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+.pm-hero::after {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, rgba(59,130,246,0) 70%);
+  pointer-events: none;
+}
+.pm-hero-eyebrow {
+  font-family: var(--pm-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pm-accent-cyan);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.pm-hero-title {
+  font-family: var(--pm-font-display);
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: var(--pm-text);
+  margin: 0 0 0.35rem 0;
+  line-height: 1.2;
+}
+.pm-hero-subtitle {
+  color: var(--pm-text-muted);
+  font-size: 1.0rem;
+  max-width: 640px;
+  margin: 0;
+}
+
+/* ---- Cards ---- */
+.pm-card {
+  background: var(--pm-surface);
+  border: 1px solid var(--pm-border);
+  border-radius: 14px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 0.9rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.pm-card:hover {
+  border-color: var(--pm-accent);
+}
+.pm-card-title {
+  font-family: var(--pm-font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--pm-text);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.pm-card-value {
+  font-family: var(--pm-font-mono);
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--pm-accent-light);
+}
+.pm-card-caption {
+  color: var(--pm-text-muted);
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
+/* ---- Badges ---- */
+.pm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--pm-font-body);
+}
+.pm-badge-success { background: rgba(52, 211, 153, 0.14); color: var(--pm-success); border: 1px solid rgba(52,211,153,0.35); }
+.pm-badge-warning { background: rgba(251, 191, 36, 0.14); color: var(--pm-warning); border: 1px solid rgba(251,191,36,0.35); }
+.pm-badge-info    { background: rgba(59, 130, 246, 0.14); color: var(--pm-accent-light); border: 1px solid rgba(59,130,246,0.35); }
+
+/* ---- Suggestion list items ---- */
+.pm-suggestion {
+  display: flex;
+  gap: 0.7rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  background: var(--pm-surface);
+  border: 1px solid var(--pm-border);
+  margin-bottom: 0.55rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.pm-suggestion-icon { flex-shrink: 0; font-size: 1.05rem; }
+.pm-suggestion.improve { border-left: 3px solid var(--pm-warning); }
+.pm-suggestion.strength { border-left: 3px solid var(--pm-success); }
+
+/* ---- Section divider label ---- */
+.pm-section-label {
+  font-family: var(--pm-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pm-accent-cyan);
+  margin: 1.6rem 0 0.4rem 0;
+  font-weight: 600;
+}
+
+/* ---- Sidebar polish ---- */
+[data-testid="stSidebar"] {
+  border-right: 1px solid var(--pm-border);
+}
+[data-testid="stSidebarNav"] li a {
+  font-family: var(--pm-font-body);
+  border-radius: 8px;
+}
+
+/* ---- Buttons ---- */
+.stButton > button, .stDownloadButton > button {
+  border-radius: 10px;
+  font-family: var(--pm-font-body);
+  font-weight: 600;
+  border: 1px solid var(--pm-accent);
+  transition: transform 0.1s ease, box-shadow 0.15s ease;
+}
+.stButton > button:hover, .stDownloadButton > button:hover {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  transform: translateY(-1px);
+}
+.stButton > button[kind="primary"] {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: var(--pm-bg); }
+::-webkit-scrollbar-thumb { background: var(--pm-border); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--pm-accent); }
+
+/* ---- Misc ---- */
+.pm-muted { color: var(--pm-text-muted); font-size: 0.88rem; }
+.pm-divider { border: none; border-top: 1px solid var(--pm-border); margin: 1.1rem 0; }
