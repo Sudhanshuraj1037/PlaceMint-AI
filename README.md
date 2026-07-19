@@ -1,252 +1,376 @@
-# 🎓 PlaceMint AI — Resume Analyzer & Placement Prediction System
+# 🎓 PlaceMint AI
+### AI Resume Analyzer & Placement Prediction System
 
-A machine learning web application that predicts an engineering student's
-campus placement chances — either from an uploaded/built resume or from
-directly entered details — and explains exactly which factors are helping
-or hurting those chances, with a full training notebook behind it.
+<p align="center">
 
-This project merges two ideas into one product:
+![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?style=for-the-badge&logo=streamlit)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?style=for-the-badge)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikitlearn)
+![Groq](https://img.shields.io/badge/Groq-LLM-black?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-- An **AI Resume Analyzer** (upload a PDF or build a resume from scratch,
-  with optional LLM-powered extraction)
-- A **Placement Prediction Model** (compared across 7 algorithms, tuned,
-  and explained with data-driven, personalised suggestions)
+</p>
 
----
-
-## ✨ Features
-
-- **Two prediction workflows**, sharing one model:
-  - **Resume Analyzer** — upload a PDF resume (parsed with an optional
-    AI layer, or a dependency-free rule-based parser) **or** build a resume
-    from scratch in a guided form, complete with HTML/PDF export.
-  - **Direct Prediction** — skip the resume and enter your profile directly.
-- **7 ML models trained and compared** (Logistic Regression, Decision Tree,
-  Random Forest, KNN, SVM, Naive Bayes, Gradient Boosting), the best one
-  selected by F1 Score and hyperparameter-tuned with `GridSearchCV`.
-- **Personalised, data-driven suggestions** — your values are compared to
-  the *Placed* student cohort from the training data, weighted by how
-  important the model found each feature (permutation importance).
-- **Full Model Performance dashboard** — comparison table, confusion
-  matrix, ROC curve, classification report, cross-validation, feature
-  importance, all read straight from the notebook's saved output.
-- **Optional AI layer** (Groq / Llama 3.3) for smarter resume extraction
-  and a personalised coaching paragraph — the app is fully functional
-  without it.
-- **Dark, modern dashboard UI** with a signature placement-probability
-  gauge reused consistently across every page.
+<p align="center">
+An AI-powered Resume Analyzer and Placement Prediction System that combines Machine Learning and Large Language Models (LLMs) to evaluate students' placement readiness, analyze resumes, and generate personalized career improvement recommendations.
+</p>
 
 ---
 
-## 📸 Screenshots
+# 🌐 Live Demo
 
-> Replace these placeholders with your own screenshots before submitting
-> your report — the **Model Performance** page and `reports/*.png` are
-> good sources for report-ready images.
-
-| Home | Direct Prediction | Model Performance |
-|---|---|---|
-| _add screenshot_ | _add screenshot_ | _add screenshot_ |
+### 🚀 https://placemint-ai-summertraining2026.streamlit.app/
 
 ---
 
-## 🗂️ Project Structure
+# 📖 About The Project
 
+PlaceMint AI is an intelligent placement assistance platform developed as a Machine Learning project at **Lovely Professional University**. The application combines traditional Machine Learning algorithms with modern Large Language Models to help engineering students evaluate their placement readiness through resume analysis and predictive analytics.
+
+The platform predicts placement probability based on a student's academic performance, technical expertise, internships, projects, certifications, aptitude, communication skills, and various other career-related factors. In addition to prediction, the application provides AI-powered resume parsing and personalized career improvement recommendations that help students understand their strengths, identify improvement areas, and prepare more effectively for campus placements.
+
+Unlike conventional placement prediction systems, PlaceMint AI focuses not only on generating accurate predictions but also on delivering meaningful insights that guide students towards better career outcomes. The project demonstrates practical applications of supervised machine learning, feature engineering, data visualization, model evaluation, resume parsing, and Generative AI in solving real-world educational and recruitment challenges.
+
+---
+
+# ✨ Features
+
+- 🤖 AI Resume Analyzer
+- 📄 Resume PDF Parsing
+- 🎯 Placement Prediction
+- 📊 Machine Learning Dashboard
+- 📈 Feature Importance Visualization
+- 📉 Correlation Heatmap
+- 📚 Personalized Career Suggestions
+- 🧠 AI Career Coaching
+- 📋 Direct Manual Prediction
+- ⚡ Fast Prediction Engine
+- ☁️ Live Streamlit Deployment
+- 📱 Responsive User Interface
+
+---
+
+# 🖥️ Application Modules
+
+## 🏠 Home
+- Project Overview
+- Dataset Statistics
+- Best Performing Model
+- Performance Summary
+
+## 📄 Resume Analyzer
+- Upload Resume PDF
+- AI Resume Parsing
+- Feature Extraction
+- Placement Prediction
+- Personalized Recommendations
+
+## 🎯 Direct Prediction
+Students can manually enter academic and skill-related information including:
+
+- CGPA
+- 10th Percentage
+- 12th Percentage
+- Attendance
+- Backlogs
+- Study Hours
+- Projects
+- Internships
+- Coding Skills
+- Communication Skills
+- Aptitude Skills
+- Certifications
+- Hackathons
+- Stress Level
+- Sleep Hours
+- Extracurricular Activities
+
+to instantly receive placement predictions.
+
+## 📊 Model Performance
+
+- Model Comparison
+- Accuracy Analysis
+- Confusion Matrix
+- ROC Curve
+- Precision
+- Recall
+- F1 Score
+- Feature Importance
+- Correlation Matrix
+
+---
+
+# 🧠 Machine Learning Workflow
+
+```text
+Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Train-Test Split
+      │
+      ▼
+Model Training
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+Best Model Selection
+      │
+      ▼
+Deployment
 ```
-placement-ai-suite/
-├── app.py                          # Entry point (streamlit run app.py)
-├── pages/                          # One file per dashboard page
-│   ├── home.py
-│   ├── resume_analyzer.py
-│   ├── direct_prediction.py
-│   ├── model_performance.py
-│   └── about.py
+
+---
+
+# 📊 Dataset
+
+The project is trained using a placement dataset containing approximately **5,000 student records** with multiple academic, technical, and career-related attributes.
+
+### Features Included
+
+- Student ID
+- Gender
+- Branch
+- CGPA
+- 10th Percentage
+- 12th Percentage
+- Attendance
+- Backlogs
+- Study Hours
+- Projects
+- Internships
+- Coding Skill Rating
+- Communication Skill Rating
+- Aptitude Skill Rating
+- Hackathons
+- Certifications
+- Sleep Hours
+- Stress Level
+- Part-Time Job
+- Family Income
+- City Tier
+- Internet Access
+- Extracurricular Activities
+- Placement Status
+- Salary (LPA)
+
+---
+
+# 📈 Model Performance
+
+🏆 **Best Performing Model:** Random Forest Classifier
+
+### Performance Metrics
+
+- ✅ Accuracy: **89.7%**
+- ✅ High F1 Score
+- ✅ Precision & Recall Analysis
+- ✅ ROC Curve
+- ✅ Confusion Matrix
+- ✅ Feature Importance
+
+---
+
+# 📸 Project Preview
+
+## 🏠 Home Dashboard
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d594e1b4-5b11-4f22-bdb0-a0fa2eb1ec9e" />
+
+
+---
+
+## 📄 AI Resume Analyzer
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/820631ee-92d3-44c4-8803-678a363ecc7d" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f5946b14-c7a8-40f2-a83d-0f6b0b965082" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/cfecdb0c-4cc5-482a-a7e3-15fb84e4e603" />
+
+---
+
+## 🎯 Placement Prediction
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/37d62b28-828f-4c14-b2d3-0689f8ed0eb9" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/7d7ffc75-8e37-4340-98d7-937809fed59a" />
+
+---
+
+## 📊 Model Performance Dashboard
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/e4420278-dcc4-4d0b-b07e-502f1b3725b0" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/293a3218-bb6f-4425-964e-bb5c861b8f66" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9e8ba08c-e3e2-46f1-8063-45ba381b4171" />
+
+
+---
+
+# 📈 Machine Learning Visualizations
+
+## Model Comparison
+
+<img src="reports/model_comparison.png" width="100%">
+
+---
+
+## Feature Importance
+
+<img src="reports/feature_importance.png" width="100%">
+
+---
+
+## Correlation Heatmap
+
+<img src="reports/correlation_heatmap.png" width="100%">
+
+---
+
+## Confusion Matrix
+
+<img src="reports/confusion_matrix.png" width="100%">
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- Streamlit
+
+### Backend
+
+- Python
+
+### Machine Learning
+
+- Scikit-learn
+- Pandas
+- NumPy
+
+### Data Visualization
+
+- Matplotlib
+- Plotly
+
+### AI Integration
+
+- Groq API
+- Llama 3.3 70B
+- Llama 3.1 8B (Fallback)
+
+### Resume Processing
+
+- PyPDF2
+- Regular Expressions
+- AI-based Resume Parsing
+
+---
+
+# 📂 Project Structure
+
+```text
+PlaceMint-AI/
+│
+├── app.py
 ├── config/
-│   └── settings.py                 # Paths & app-wide constants
+├── pages/
 ├── utils/
-│   ├── feature_engineering.py      # Shared transformer (inside the saved pipeline)
-│   ├── model_utils.py              # Load model/artifacts, run predictions
-│   ├── suggestions.py              # Data-driven improvement suggestions
-│   ├── resume_parser.py            # PDF text extraction + rule-based extraction
-│   ├── llm_engine.py                # Optional Groq-powered AI features
-│   ├── resume_schema.py             # Canonical resume data schema
-│   ├── pdf_generator.py             # Resume HTML/PDF export
-│   └── theme.py                     # CSS injection + shared UI components
-├── templates/
-│   └── ats_friendly.html            # Resume export template
 ├── data/
-│   └── placement_data.csv           # Training dataset (replace to retrain on your own data)
+├── models/
 ├── notebooks/
-│   └── Placement_Model_Training.ipynb
-├── models/                          # Generated by the notebook
-│   ├── placement_model.pkl
-│   ├── feature_config.json
-│   └── model_metrics.json
-├── reports/                         # Generated by the notebook (report-ready PNGs)
+├── reports/
 ├── assets/
-│   └── style.css
-├── .streamlit/config.toml           # Dark + blue theme
-├── .env.example
+├── templates/
 ├── requirements.txt
-└── packages.txt                     # Optional system deps for PDF export
+└── README.md
 ```
 
 ---
 
-## 🚀 Installation & Setup
-
-**Requirements:** Python 3.10+
+# 🚀 Installation
 
 ```bash
-# 1. Create and activate a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+git clone https://github.com/Sudhanshuraj1037/PlaceMint-AI.git
 
-# 2. Install dependencies
+cd PlaceMint-AI
+
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux / macOS
+source .venv/bin/activate
+
 pip install -r requirements.txt
 
-# 3. (Optional) Enable AI-powered resume extraction & coaching advice
-cp .env.example .env
-# then edit .env and add a free key from https://console.groq.com
-```
-
-The trained model is already included under `models/`, so you can run the
-app immediately — no training required first. If you want to retrain (e.g.
-after replacing the dataset), see [Model Training](#-model-training) below.
-
-### Run the app
-
-```bash
 streamlit run app.py
 ```
 
-Then open the URL Streamlit prints (usually `http://localhost:8501`).
+---
+
+# 👨‍💻 Contributors
+
+| Name | Roll No. | LinkedIn | GitHub |
+|------|-----------|----------|---------|
+| Hariom Tiwari | 12402165 | https://www.linkedin.com/in/hariom-tiwari-b2a325322/ | — |
+| Preet Singh | 12407993 | https://www.linkedin.com/in/preet-bana10/ | https://github.com/Preet100 |
+| Mridul Vatsal | 12405889 | https://www.linkedin.com/in/mridul-vatsal08 | https://github.com/Mridulvatsal |
+| Sudhanshu Raj | 12406597 | https://www.linkedin.com/in/sudhanshu-raj-7b1651321 | https://github.com/Sudhanshuraj1037 |
 
 ---
 
-## 📊 Dataset
+# 🎓 Academic Information
 
-`data/placement_data.csv` contains **5,000 engineering student records**
-with academic performance, skills, projects, internships, certifications,
-and lifestyle factors, alongside their real placement outcome:
+**University:** Lovely Professional University, Phagwara, Punjab
 
-| Column | Description |
-|---|---|
-| `cgpa`, `tenth_percentage`, `twelfth_percentage` | Academic scores |
-| `backlogs`, `attendance_percentage`, `study_hours_per_day` | Academic habits |
-| `projects_completed`, `internships_completed`, `hackathons_participated` | Practical experience |
-| `coding_skill_rating`, `communication_skill_rating`, `aptitude_skill_rating` | Self-rated skills (1-5) |
-| `certifications_count`, `extracurricular_involvement` | Additional profile factors |
-| `sleep_hours`, `stress_level`, `part_time_job`, `family_income_level`, `city_tier`, `internet_access` | Lifestyle / background |
-| `gender`, `branch` | Demographics |
-| `placement_status` | **Target**: `Placed` / `Not Placed` |
+**Department:** Department of Computer Science & Engineering
 
-**To train on your own data:** replace `data/placement_data.csv` with a CSV
-using the same column names, then re-run the notebook (see below). Every
-downstream step — cleaning, EDA, encoding, training, evaluation, and the
-artifacts the app depends on — regenerates automatically.
+**Academic Session:** 2025 – 2026
+
+**Project Guide:** Sir Anzar Hussain Lone
 
 ---
 
-## 🧪 Model Training
+# 🔮 Future Enhancements
 
-The full training pipeline lives in
-`notebooks/Placement_Model_Training.ipynb` — 22 sections covering data
-understanding, cleaning, EDA (9 charts), feature engineering, encoding,
-scaling, an 80/20 train-test split, training + comparing 7 models,
-hyperparameter tuning, confusion matrix, ROC curve, classification report,
-5-fold cross-validation, permutation-based feature importance, and finally
-saving everything the app needs.
-
-To retrain:
-
-```bash
-jupyter notebook notebooks/Placement_Model_Training.ipynb
-# Kernel -> Restart & Run All
-```
-
-This regenerates:
-- `models/placement_model.pkl` — the full pipeline (feature engineering +
-  encoding + scaling + classifier) bundled into one object
-- `models/feature_config.json` — feature lists, dropdown options, ranges,
-  defaults, and cohort statistics used to build the app's forms
-- `models/model_metrics.json` — every metric the Model Performance page displays
-- `reports/*.png` — report-ready charts
-
-**Current best model:** selected automatically by F1 Score at training
-time (imbalanced data makes F1 more reliable than raw Accuracy) — see the
-notebook's Section 22 conclusion or the app's Model Performance page for
-the specific model and metrics from the last training run.
+- ATS Resume Scoring
+- Job Recommendation System
+- Company-wise Placement Prediction
+- Skill Gap Analysis
+- Mock Interview Module
+- Resume Builder
+- Authentication System
+- Student Dashboard
+- Admin Portal
+- Placement Analytics
 
 ---
 
-## 🤖 Optional AI Features
+# ⭐ Show Your Support
 
-Everything works out of the box with **zero API keys**. Adding a free
-[Groq](https://console.groq.com) API key to `.env` additionally unlocks:
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
 
-- **AI-powered resume extraction** — more accurate than the built-in
-  rule-based parser on varied real-world resume formats/layouts.
-- **AI Coach** — a short, personalised coaching paragraph on the
-  prediction results, built on top of the same data-driven suggestions.
-- **AI-generated resume summary** — in the "Build a Resume" flow.
-
-Without a key, the app automatically falls back to the rule-based resume
-parser and the plain data-driven suggestions — nothing breaks.
+Your support motivates us to build more innovative AI-powered educational applications.
 
 ---
 
-## 🖨️ Resume PDF Export
+## 📜 License
 
-Resume export always produces a styled **HTML** file (open it and press
-`Ctrl+P` to save as PDF from any browser). One-click **PDF** download is
-available too, if a PDF engine is installed:
-
-```bash
-pip install weasyprint
-```
-
-WeasyPrint needs system libraries (Pango/Cairo) — see `packages.txt` for
-the exact list on Debian/Ubuntu, or the
-[WeasyPrint install docs](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html)
-for Windows/macOS.
+This project is developed for academic and educational purposes at **Lovely Professional University**.
 
 ---
 
-## 🛠️ Technology Stack
+<p align="center">
 
-Python · Streamlit · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn ·
-Plotly · Joblib · pdfplumber / PyPDF2 · Jinja2 · Groq (optional)
+Made with ❤️ by the PlaceMint AI Team
 
----
-
-## 📌 Scope Decisions
-
-- **ATS-score / skill-gap / interview-prep** features from the original
-  resume-builder prototype were left out here — they compare a resume
-  against a *specific job description*, which this placement-prediction
-  workflow doesn't collect. The resume *parsing* and *export* pieces were
-  kept and adapted.
-- **Feature engineering lives inside the saved model pipeline itself**
-  (`utils/feature_engineering.py`), not duplicated between the notebook
-  and the app, so training and serving can never silently drift apart.
-- **Suggestions are grounded in the training data**, not invented — see
-  `utils/suggestions.py`.
-
----
-
-## 🔮 Future Improvements
-
-- Recruiter-side features (company type, role) and placement-season time trends.
-- Richer resume-derived signals (project descriptions, GitHub activity)
-  instead of single 1-5 self-rated skill scores.
-- Re-introduce job-description matching (ATS score, skill gaps) as a
-  separate, optional workflow alongside placement prediction.
-- User accounts to track predictions and resume versions over time.
-
----
-
-## 📄 License
-
-Built as a university machine learning project. Use and adapt freely for
-academic purposes.
+</p>
