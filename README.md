@@ -321,7 +321,7 @@ streamlit run app.py
 
 | Name | Roll No. | LinkedIn | GitHub |
 |------|-----------|----------|---------|
-| Hariom Tiwari | 12402165 | https://www.linkedin.com/in/hariom-tiwari-b2a325322/ | — |
+| Hariom Tiwari | 12402165 | https://www.linkedin.com/in/hariom-tiwari-b2a325322/ | https://github.com/Hariom0605 |
 | Preet Singh | 12407993 | https://www.linkedin.com/in/preet-bana10/ | https://github.com/Preet100 |
 | Mridul Vatsal | 12405889 | https://www.linkedin.com/in/mridul-vatsal08 | https://github.com/Mridulvatsal |
 | Sudhanshu Raj | 12406597 | https://www.linkedin.com/in/sudhanshu-raj-7b1651321 | https://github.com/Sudhanshuraj1037 |
